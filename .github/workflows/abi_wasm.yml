@@ -42,7 +42,7 @@ jobs:
             !/nix/var/nix/gc.lock
             !/nix/var/nix/db/big-lock
             !/nix/var/nix/db/reserved
-          key: ${{ runner.os }}-nix-store
+          key: barretenberg
       - uses: cachix/cachix-action@v12
         with:
           name: barretenberg

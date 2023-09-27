@@ -28,11 +28,6 @@ jobs:
           nix_path: nixpkgs=channel:nixos-23.05
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: cachix/cachix-action@v12
-        with:
-          name: barretenberg
-          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
-
       - name: Build noirc_abi_wasm
         run: |
           nix build -L .#noirc_abi_wasm

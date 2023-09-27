@@ -40,7 +40,7 @@ jobs:
           authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
       - name: Build noirc_abi_wasm
         run: |
-          nix build -f -L .#noirc_abi_wasm
+          nix build -L .#noirc_abi_wasm
           cp -r ./result/noirc_abi_wasm/nodejs ./tooling/noirc_abi_wasm
           cp -r ./result/noirc_abi_wasm/web ./tooling/noirc_abi_wasm
 

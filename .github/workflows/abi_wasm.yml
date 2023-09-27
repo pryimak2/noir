@@ -31,9 +31,9 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ${{ env.CACHED_PATH }}
-          key: nix-store-${{ runner.os }}-${{ hashFiles('**/*.nix') }}
+          key: nix-store-barretenberg
           restore-keys: |
-            nix-store-${{ runner.os }}-
+            nix-store-barretenberg-
       - uses: cachix/cachix-action@v12
         with:
           name: barretenberg

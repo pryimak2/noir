@@ -88,3 +88,4 @@ jobs:
 
       - name: Run browser tests
         run: yarn workspace @noir-lang/noirc_abi test:browser
+

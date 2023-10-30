@@ -144,7 +144,7 @@ jobs:
           tool: cross@0.2.5
 
       - name: Build Nargo
-        run: cross build --package nargo_cli --release --target=${{ matrix.target }} --no-default-features --features "${{ inputs.features }}"
+        run: cross build --package nargo_cli --release --target=${{ matrix.target }} --no-default-features --features "${{ inputs.features }} noirc_frontend/aztec"
 
       - name: Package artifacts
         run: |
